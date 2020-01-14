@@ -1,0 +1,81 @@
+ /*
+    
+    Students Portfolio Repo
+
+    You are creating a Postgres structure (Tables) to save the informations about Students and Projects.
+
+    The student Table should have the current information
+
+    - _id --> you should define it as identity in the newly created table
+    - name 
+    - surname
+    - email
+    - dateOfBirth 
+
+    While the project Table should have the current information
+
+    - _id --> you should define it as identity in the newly created table
+    - Name
+    - Description
+    - Creation Date
+    - RepoURL -> Code Repo URL (es.: GitHub / BitBucket project URL)
+    - LiveURL -> URL of the "live" project
+    - StudentID --> [EXTRA] This should be a Foreign Key to Students table
+
+    Complete the following exercise:
+
+    EX1) Create a query for creating the table Students as specified before
+
+    CREATE TABLE Students (
+        _id UUID PRIMARY KEY, ? entry for uuid 
+        name TEXT NOT NULL, 
+        surname TEXT NOT NULL, 
+        email TEXT NOT NULL,
+        dob DATE              ? entry for dob
+    )
+
+    EX2) Use the tool you prefer to connect to the DB and create the table Project
+
+       CREATE TABLE Project (
+        _id UUID PRIMARY KEY,      ? entry for uuid
+        Name TEXT NOT NULL,
+        Description TEXT NOT NULL,
+        Creation Date DATE         ? entry for creation date vs dob kind of date
+        RepoURL URL                ? entry for URLS
+        LiveURL URL                ? entry for URLS
+        StudentID                  ? Foreign Key from Students Table
+       )
+
+        EX3) Write a query to insert a new Student (Your name, your email, your surname, your date of birth)
+
+    router.post INSERT Student
+
+        EX4) Write a query to insert a new Project (one of the previously created project, insert your student ID as studentid)
+    
+    router.post INSERT Project
+
+EX5) Write another query to insert a second project
+?? same POST yes?
+or INSERT INTO projects
+
+        EX6) Write a query to update the second project you entered, changing name and LiveURL
+
+    router.put UPDATE Project
+
+        EX7) Write a query to select all the projects, specifying the student email too
+    
+    router.get("/:email") SELECT * query.body.email
+
+        EX8) Write a query to delete one of the two projects
+    
+    router.delete 1/2 Projects ?
+
+        EX9) Write a query to insert a second students
+    
+    router.post INSERT 
+    
+        EX10) Write a query to delete the second student
+
+    router.delete DELETE FROM 
+
+*/
