@@ -17,7 +17,7 @@
     "mongoose": "^5.8.6",
     "pg": "^7.17.1",
     "uuid": "^3.3.3",
-    "validator": "^12.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.1"
